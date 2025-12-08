@@ -1,8 +1,10 @@
-import { io } from 'socket.io-client';
+import { io } from "socket.io-client";
 
-const SERVER = import.meta.env.VITE_SERVER_URL || 'http://localhost:4000';
+export const socket = io("http://localhost:4000", {
+  autoConnect: true,
+  transports: ["websocket"],
+});
 
-// create socket instance but do NOT auto-connect
-export const socket = io(SERVER, {
-  autoConnect: false,
+socket.on("connect", () => {
+  console.log("🌐 Global socket connected:", socket.id);
 });

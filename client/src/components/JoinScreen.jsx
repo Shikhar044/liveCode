@@ -15,7 +15,7 @@ function JoinScreen({ onNext }) {
           C
         </div>
         <div>
-          <h1 className="text-white text-2xl font-semibold">Welcome to Chatter</h1>
+          <h1 className="text-white text-2xl font-semibold">Welcome to HalloChat</h1>
           <p className="text-slate-300 text-sm">Enter a display name to continue</p>
         </div>
       </div>
